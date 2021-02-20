@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html id = 'todo-all'>
+
+<head>
+    <link href="ToDoList-css.css" rel="stylesheet">
+    <title>fatemeh</title>
+</head>
+
+<body>
+   <div id = "first-todolist" class = "first-todo" style = "display:block">
+    <div id="up-part" class="up-part"  style="display:block">
+        <h1 style="color:rgb(11, 11, 17)">
+            TO DO List
+        </h1>
+
+        <input type="text" id="input" placeholder="input...">
+        <span  id="addbutton" >add</span>
+        <input type="button" value="Sign in" id="btnSignin" class="updownload" onclick="showLoginPage()" />
+            <input type="button" value="Sign up" id="btnSignup" class="updownload" onclick="showRegisterPage()">
+            <span id="spnUserDisplayName" class="updownload">---</span>
+            <input type="button" value="Sign out" id="btnSignout" class="btn-filterud" style="display:none" onclick="logoff()" />
+        <span type='submit' id="upload-button" class = "updownload" onclick="upload()"> upload</span>
+        <span type='submit' id = "download-button" class = "updownload" onclick="download()">download</span>
+    </div>
+    <div id='filters'>
+        <span id= 'filter-all'>All</span>
+        <span id= 'filter-active'>Active</span>
+        <span id= 'filter-completed'>Completed</span>
+    </div>
+    <div id="list-part" class="list-part">
+        <ul id="list-items">
+          
+        </ul>
+    </div>
+</div>
+    <div id="id01" style="display:none">
+        <div>
+            <input type="text" class="userlogin" placeholder="Enter Username" id="modal-username" name="uname" required autocomplete="off" />
+        </div>
+        <div>
+            <input type="password" class="passlogin" placeholder="Enter Password" id="modal-password" name="pwd" />
+        </div>
+        <div>
+            <br></br>
+            <input type="button" value="Login" class="btn-in-login" onclick="login()" />
+            <input type="button" value="Cancel" class="cancelbtn" onclick="cancelLogin()" />
+        </div>
+    </div>  
+
+    <div id="signup-page" style="display:none">
+        <div>
+            <input type="text" placeholder="fisrtname" class="userlogin" id="fisrtnameSignup" />
+        </div>
+        <div>
+            <input type="text" placeholder="lastname" class="passlogin" id="lastnameSignup" />
+        </div>
+        <div>
+            <input type="text" placeholder="username" class="passlogin" id="usernameSignup" />
+        </div>
+        <div>
+            <input type="text" placeholder="password" class="passlogin" id="passwordSignup" />
+        </div>
+        <div>
+            <br></br>
+            <input type="button" value="submit" class="btn-in-login" onclick="register()" />
+            <input type="button" value="Cancel" class="cancelbtn" onclick="cancelRegister()" />
+        </div>
+
+    </div>
+    <script type="text/javascript" src="tod-model.js"></script>
+    <script type="text/javascript" src="todo-view.js"></script>
+    <script type="text/javascript" src="todo-controler.js"></script>
+    <script src="http.js"></script>
+    <script src="database.js"></script>
+    <script src="connection.js"></script>
+    
+
+</body>
